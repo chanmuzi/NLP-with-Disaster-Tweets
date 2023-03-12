@@ -1,2 +1,4 @@
 *.pt
 wandb
+
+experiment.ipynb
