@@ -2,3 +2,6 @@
 wandb
 
 experiment.ipynb
+
+__pycache__/
+__init__.py
