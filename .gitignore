@@ -3,5 +3,8 @@ wandb
 
 experiment.ipynb
 
+**/.DS_Store
+.DS_Store
+
 __pycache__/
 __init__.py
