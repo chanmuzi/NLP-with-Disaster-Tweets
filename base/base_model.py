@@ -7,12 +7,6 @@ class BaseModel(nn.Module):
 
     @ abstractmethod
     def forward(self,*inputs):
-        """
-        When you use original model, you don't have to make logit
-        be picked out from the output.
-        But, in case of 'model for classification', the output of
-        model includes 'loss' and 'logits'.
-        """
         raise NotImplementedError
 
     def __str__(self):
