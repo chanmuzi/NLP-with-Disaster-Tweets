@@ -1,4 +1,4 @@
 from sklearn.metrics import f1_score
 
-def f1_score(y_true, y_pred):
+def accuracy(y_true, y_pred):
     return f1_score(y_true, y_pred)
