@@ -9,20 +9,6 @@ def ensure_dir(dirname):
     if not dirname.is_dir():
         dirname.mkdir(parents=True,exist_ok=False)
 
-def read_json(fname):
-    fname = Path(fname)
-    with fname.open('rt') as handle:
-        return json.load(handle,obejct_hook=OrderedDict)
-
-def write_json(content,fname):
-    fname = Path(fname)
-    with fname.open('wt') as handle:
-        json.dump(content,handle,indent=4,sort_keys=False)
-
-def inf_loop(data_loader):
-    for loader in repeat(data_loader):
-        yield from loader
-
 def prepare_device(n_gpu_use):
     n_gpu = torch.cuda.device_count()
     if n_gpu_use > 0 and n_gpu == 0:
