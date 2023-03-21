@@ -4,7 +4,6 @@ import gc, os
 import numpy as np
 import torch
 from base import BaseTrainer
-from utils import inf_loop, MetricTracker
 
 class Trainer(BaseTrainer):
     def __init__(self,model,device,criterion,metric_ftn,optimizer,config,
