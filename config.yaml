@@ -16,7 +16,7 @@ train:
   batch_size: 16
   max_epoch: 3
   dropout_rate: 0.1
-  learning_rate: 5e-6
+  learning_rate: 6e-6
   max_length: 84
   optimizer_lr: 6e-6
   optimizer_eps: 1e-8
