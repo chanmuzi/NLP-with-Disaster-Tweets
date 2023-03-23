@@ -29,7 +29,11 @@ def main(config):
     tokenizer = AutoTokenizer.from_pretrained(config.model.model_name)
     train_data = pd.read_csv(config.data.train_path + 'train.csv')
 
-    train_loader,valid_loader = dataloader(dataset=train_data, tokenizer=tokenizer, batch_size=config.train.batch_size, is_test=False)
+    train_loader,valid_loader = dataloader(
+        dataset=train_data, 
+        tokenizer=tokenizer, 
+        batch_size=config.train.batch_size, 
+        is_test=False)
     criterion = getattr(Criterion, config.model.loss)
     optimizer = AdamW(model.parameters(), lr=config.train.learning_rate)
     metric = Metric
