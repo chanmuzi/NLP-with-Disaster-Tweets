@@ -10,8 +10,7 @@ from base.base_data_loader import BaseDataLoader as dataloader
 import model.loss as Criterion
 from model.metric import accuracy as Metric
 from model.model import CEModel as Model
-from trainer import Trainer
-
+import trainer as Trainer
 from transformers import AutoTokenizer, AutoModelForSequenceClassification, AdamW
 
 SEED = 42
