@@ -31,7 +31,7 @@ class BaseDataset(Dataset):
             labels = self.df.loc[idx]['target']
             return {'input_ids':encoded_dict['input_ids'].squeeze(),
                     'attention_mask':encoded_dict['attention_mask'].squeeze(),
-                    'labels':torch.tensor(labels,dtype=torch.long).unsqueeze(dim=0)}
+                    'labels':torch.tensor(labels,dtype=torch.long)}
         else:
             return {'input_ids':encoded_dict['input_ids'].squeeze(),
                     'attention_mask':encoded_dict['attention_mask'].squeeze()}
