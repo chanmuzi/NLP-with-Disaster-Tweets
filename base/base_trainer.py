@@ -14,12 +14,10 @@ class BaseTrainer:
         self.metric = metric
         self.optimizer = optimizer
 
-        cfg_trainer = config['trainer']
-        self.epochs = cfg_trainer['epochs']
+        cfg_trainer = config.train
+        self.epochs = cfg_trainer.max_epoch
             
         self.start_epoch = 1
-
-        self.checkpoint_dir = config.save_dir
         
     @abstractmethod
     def _train_epoch(self,epoch):
