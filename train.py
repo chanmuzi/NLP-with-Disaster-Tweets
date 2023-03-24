@@ -12,7 +12,7 @@ from model.metric import accuracy as Metric
 from model.model import CEModel as Model
 from trainer import Trainer
 
-from transformers import AutoTokenizer, AutoModelForAudioClassification, AdamW
+from transformers import AutoTokenizer, AutoModelForSequenceClassification, AdamW
 
 SEED = 42
 np.random.seed(SEED)
@@ -22,7 +22,7 @@ if torch.cuda.is_available():
     torch.backends.cudnn.benchmark = False
 
 def main(config):
-    model = AutoModelForAudioClassification.from_pretrained(config.model.model_name)
+    model = AutoModelForSequenceClassification.from_pretrained(config.model.model_name)
     device, _ = prepare_device(config['n_gpu'])
     model.to(device)
 
