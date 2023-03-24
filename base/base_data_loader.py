@@ -5,7 +5,7 @@ def BaseDataLoader(dataset,tokenizer,batch_size,is_test):
     # BaseDataset(df,tokenizer,label,preprocess)
     if is_test == True:
         test_dataset = BaseDataset(dataset, tokenizer, label=False, preprocess=False)
-        test_loader = DataLoader(test_dataset, batchsize=batch_size, shuffle=False, pin_memory=False)
+        test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False, pin_memory=False)
 
         print(f'{len(test_dataset)} valid samples')
 
