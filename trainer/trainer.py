@@ -16,6 +16,7 @@ class Trainer(BaseTrainer):
         self.train_dataloader = train_dataloader
         self.valid_dataloader = valid_dataloader
 
+        self.model = model
         self.lr_scheduler = lr_scheduler
         self.metric_ftn = metric_ftn
 

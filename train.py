@@ -21,8 +21,8 @@ if torch.cuda.is_available():
     torch.backends.cudnn.benchmark = False
 
 def main(config):
-    model = AutoModelForSequenceClassification.from_pretrained(config.model.model_name)
-    device, _ = prepare_device(config['n_gpu'])
+    model = Model(config.model.model_name)
+    device, _ = prepare_device(config.n_gpu)
     model.to(device)
 
     tokenizer = AutoTokenizer.from_pretrained(config.model.model_name)
