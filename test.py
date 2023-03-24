@@ -50,7 +50,7 @@ def main(config):
 
 if __name__ == '__main__':
     torch.cuda.empty_cache()
-    parser = argparse.ArugmentParser()
+    parser = argparse.ArgumentParser()
     parser.add_argument('--config', type=str, default='config')
     args, _ = parser.parse_known_args()
 
