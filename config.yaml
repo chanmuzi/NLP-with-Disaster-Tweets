@@ -9,7 +9,7 @@ model:
   model_class: CEModel
   trainner_class: Trainer
   metric_fnt: accuracy
-  loss: CEloss
+  loss: cross_entropy_loss
   optimizer: AdamW
 
 train:
