@@ -1,3 +1,5 @@
+n_gpu: 1
+
 data:
   train_path: data/
   test_path: data/
