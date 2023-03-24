@@ -11,7 +11,7 @@ def BaseDataLoader(dataset,tokenizer,batch_size,is_test):
 
         return test_loader
     else:
-        train_dataset = BaseDataset(train_dataset,tokenizer,label=True,preprocess=False)
+        train_dataset = BaseDataset(dataset,tokenizer,label=True,preprocess=False)
 
         train_size = int(len(train_dataset)*0.8)
         valid_size = len(train_dataset) - train_size
