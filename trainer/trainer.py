@@ -8,7 +8,7 @@ from base import BaseTrainer
 class Trainer(BaseTrainer):
     def __init__(self,model,device,criterion,metric_ftn,optimizer,config,
                 train_dataloader,valid_dataloader,epochs,lr_scheduler=None):
-        super().init__(model,criterion,metric_ftn,optimizer,config)
+        super().__init__(model,criterion,metric_ftn,optimizer,config)
         self.config = config
         self.device = device
         self.epochs = epochs
